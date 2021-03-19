@@ -8,53 +8,58 @@ document.getElementById('buttonFormFirst').onclick = function()
 {
     if(document.getElementById('buttonFormFirst').onclick)
     {      
+        // str1 = lineSpace(str1); 
+        // str2 = lineSpace(str2); 
+        // str3 = lineSpace(str3); 
+        // str4 = lineSpace(str4); 
+        // str5 = lineSpace(str5); 
         if (str1.validity.valid&&
             str2.validity.valid&&
             str3.validity.valid&&
             str4.validity.valid&&
             str5.validity.valid) 
+        {
+            let inputData = [str1.value,
+                                str2.value,
+                                str3.value,
+                                str4.value,
+                                str5.value];
+
+            bubbleSort(inputData);
+
+            let elementsLargest = [],
+                finalArray = [],
+                elementLength=0, 
+                tV=0; /*temporary variable*/
+            
+            inputData.forEach(function(item) 
             {
-                let inputData = [str1.value,
-                            str2.value,
-                            str3.value,
-                            str4.value,
-                            str5.value];
-
-                bubbleSort(inputData);
-
-                let elementsLargest = [],
-                    finalArray = [],
-                    elementLength=0, 
-                    tV=0; /*temporary variable*/
-                
-                inputData.forEach(function(item) 
+                elementLength=item.length;
+                if(elementLength>=tV)
                 {
-                    elementLength=item.length;
-                    if(elementLength>=tV)
-                    {
-                        elementsLargest.length++;
-                            for(let j = 0; j < elementsLargest.length; j++)
+                    elementsLargest.length++;
+                        for(let j = 0; j < elementsLargest.length; j++)
+                        {
+                            if(elementLength>tV)
                             {
-                                if(elementLength>tV)
-                                {
-                                    elementsLargest[j] = item;
-                                    break;
-                                }
-                                else if(elementsLargest[j]==null)
-                                {
-                                    elementsLargest[j] = item;
-                                }        
+                                elementsLargest[j] = item;
+                                break;
                             }
-                    tV=elementLength;       
-                    }  
-                });
-                
-                finalArray = elementsLargest.filter(function(item) 
-                {
-                    return item.length > 0;
-                });
-                
-                alert(finalArray);
+                            else if(elementsLargest[j]==null)
+                            {
+                                elementsLargest[j] = item;
+                            }        
+                        }
+                tV=elementLength;       
+                }  
+            });
+            
+            finalArray = elementsLargest.filter(function(item) 
+            {
+                return item.length > 0;
+            });
+            
+            alert(finalArray);
         }
     }
 }

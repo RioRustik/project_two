@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="taskFormFirst" action="#">
+            <input type="text" id="inputFirstFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
+            <input type="text" id="inputSecondFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
+            <input type="text" id="inputThirdFormFirst" form="taskFormFirst"  pattern="\D{1,}" onblur="lineSpace()" required>
+            <input type="text" id="inputFourthFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
+            <input type="text" id="inputFifthFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
+            <button id="buttonFormFirst" form="taskFormFirst" onclick="">123</button>
+        </form>
+    </div>
+    <div>
+        <form id="taskFormSecond" action="#">
+            <input type="text" id="inputFirstFormSecond" class="inp" form="taskFormSecond" pattern="\D{1,}" required>
+            <button id="buttonFormSecond" form="taskFormSecond" onclick="">456</button>
+        </form>
+    </div>
+    <div>
+        <form id="taskFormThird" action="#">
+            <input type="text" id="inputFirstFormThird" class="inp" form="taskFormThird" pattern="\D{1,}" required>
+            <button id="buttonFormThird" form="taskFormThird" onclick="">789</button>
+        </form>
+    </div>
+    <div>
+        <form id="taskFormFourth" action="#">
+            <input type="text" id="inputFirstFormFourth" class="inp" form="taskFormFourth" pattern="\D{1,}" required >
+            <input type="text" id="inputSecondFormFourth" class="inp" form="taskFormFourth" pattern="\D{1,}" required >
+            <button id="buttonFormFourth" form="taskFormFourth"  onclick="">2468</button>
+        </form>
+    </div>
+</body>
+<script src="js/taskFirst.js"></script> 
+<script src="js/taskSecond.js"></script> 
+<script src="js/taskThird.js"></script>
+<script src="js/taskFourth.js"></script>
+</html>
