@@ -42,7 +42,7 @@
         <form id="servisForm" action="#">
             <input type="text" id="inputFirstServisForm" form="servisForm">
             <input type="text" id="inputSecondServisForm" form="servisForm">
-            <button id="buttonServisForm" form="servisForm">save</button>
+            <button type="submit" id="buttonServisForm" form="servisForm">save</button>
         </form>
     </div>
 </body>
@@ -60,42 +60,29 @@
             this.country = options.country;
         }
     }
-
+    
     let films = [];
-    let jsonStr;
-    let history;
     document.getElementById('buttonServisForm').onclick = function()
     {
         if(document.getElementById('buttonServisForm').onclick)
         {
-            
-            for(let i = -1; i<films.length; i++)
-            {
-                if(films[i]==null)
-                {
-                    films.push(new Film({
-                            title : document.getElementById('inputFirstServisForm').value,
-                            country : document.getElementById('inputSecondServisForm').value
-                        }));
-                      
-                        history = sessionStorage.getItem('str');
-                        sessionStorage.setItem('str', JSON.stringify(films));
-                        history = JSON.parse(history);
-                        
-
-          
-                        sessionStorage.setItem('str', JSON.stringify(films));
-                        // let jsonStr = sessionStorage.getItem('str')
-
-                        
-                }
+            if(sessionStorage.getItem('str')){
+                films = JSON.parse(sessionStorage.getItem('str'));
+                films.push(new Film({
+                    title : document.getElementById('inputFirstServisForm').value,
+                    country : document.getElementById('inputSecondServisForm').value
+                }));
+                sessionStorage.setItem('str', JSON.stringify(films));
+            }else{
+                films.push(new Film({
+                    title : document.getElementById('inputFirstServisForm').value,
+                    country : document.getElementById('inputSecondServisForm').value
+                }));
+                sessionStorage.setItem('str', JSON.stringify(films));
                 
-            }
-            // console.log(jsonStr);
+                }        
+            console.log(films);
         }
-        
     }
-    
-
 </script>
 </html>
