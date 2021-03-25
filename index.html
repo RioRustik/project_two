@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styleIndex.css">
 </head>
 <body>
     <div>
@@ -42,47 +43,17 @@
         <form id="servisForm" action="#">
             <input type="text" id="inputFirstServisForm" form="servisForm">
             <input type="text" id="inputSecondServisForm" form="servisForm">
-            <button type="submit" id="buttonServisForm" form="servisForm">save</button>
+            <button id="buttonServisForm" form="servisForm" onclick="window.location.href=window.location.href">save</button>
+            <!-- <input type="button" id="buttonServisForm" form="servisForm" value="save" > -->
         </form>
+    </div>
+    <div id="vid" class="s1">
+
     </div>
 </body>
 <script src="js/taskFirst.js"></script> 
 <script src="js/taskSecond.js"></script> 
 <script src="js/taskThird.js"></script>
 <script src="js/taskFourth.js"></script>
-<script>
-
-    class Film
-    {
-        constructor(options) 
-        {
-            this.title = options.title;
-            this.country = options.country;
-        }
-    }
-    
-    let films = [];
-    document.getElementById('buttonServisForm').onclick = function()
-    {
-        if(document.getElementById('buttonServisForm').onclick)
-        {
-            if(sessionStorage.getItem('str')){
-                films = JSON.parse(sessionStorage.getItem('str'));
-                films.push(new Film({
-                    title : document.getElementById('inputFirstServisForm').value,
-                    country : document.getElementById('inputSecondServisForm').value
-                }));
-                sessionStorage.setItem('str', JSON.stringify(films));
-            }else{
-                films.push(new Film({
-                    title : document.getElementById('inputFirstServisForm').value,
-                    country : document.getElementById('inputSecondServisForm').value
-                }));
-                sessionStorage.setItem('str', JSON.stringify(films));
-                
-                }        
-            console.log(films);
-        }
-    }
-</script>
+<script src="js/taskFifth.js"></script>
 </html>

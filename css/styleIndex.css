@@ -1,0 +1,29 @@
+.s1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 500px;
+    min-height: 400px;
+    background-color: aquamarine;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+.s2{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 230px;
+    height: 370px;
+    background-color: rgb(59, 147, 219);
+    margin: 5px;
+}
+.s3{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 100px;
+    height: 100px;
+    background-color: rgb(219, 176, 59);
+    margin: 5px;
+}

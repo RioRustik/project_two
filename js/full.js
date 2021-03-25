@@ -42,3 +42,45 @@
 // }
 // console.log(count);
 // console.log(arr2);
+
+
+
+
+
+
+
+// if(sessionStorage.getItem('str'))
+// {
+//     films = JSON.parse(sessionStorage.getItem('str'));
+//     console.log(films);
+//     document.getElementById('vid').innerHTML = films.Film;
+    // var d=document.createElement('div');
+    // d.innerHTML = films;
+    // console.log(d);
+    // document.body.appendChild(d)
+    // d.style.width='200px';
+    // d.style.height='100px';
+    // d.style.background='gray';
+    // for(let i = 0; i < films.length; i++)
+    // {
+    //     d.innerHTML = films[i];
+    //     document.body.appendChild(d);
+    // }
+// }
+// window.onload = function what(){
+//     let d = 3;
+//     document.getElementById('vid').innerHTML = d;
+// };
+    // for(let key in films){
+
+    //     var d=document.getElementById('vid');
+    //     d.style.width='500px';
+    //     d.style.height='100px';
+    //     d.style.background='gray';
+    //     d.style.color ='red';
+    //     d.innerHTML = films[key];
+    //     // document.body.appendChild(d)
+    //     console.log(films[key])
+    //     // console.log(d) 
+
+    // }
