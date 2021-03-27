@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+
+* {
+    font-family: Montserrat; 
+    font-size: 0.98em;
+    padding: 0;
+    margin: 0;
+    /* animation: load 1s ease-in-out; */
+}
+/* @keyframes load {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }  
+    100% {
+        opacity: 1; 
+        transform: translateY(0px);
+    }   
+} */
 .s1{
     display: flex;
     flex-direction: row;
@@ -26,4 +45,82 @@
     height: 100px;
     background-color: rgb(219, 176, 59);
     margin: 5px;
+}
+
+.picture {
+    display: block;
+    position: relative;
+    height: 280px;
+    width: 450px;
+}
+.front, .back {
+    color: #F7E7C9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+}
+.back {
+    /* flex-direction: column; */
+    transform: rotateY(180deg);
+}
+.favorite-f-back {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(128, 125, 125, 0.7) ), #232525;
+}
+.favorite-f {
+    background: linear-gradient( rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7) ), url(https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/2713cdf8-f8e3-43b7-8922-d07098d2b2c1/300x450);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.picture:hover .front {
+    transform: rotateY(180deg) scale(1.12);
+}
+.picture:hover .back {
+    transform: rotateY(360deg) 
+}
+.s33{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 100%;
+}
+.s23{
+    font-size: 2em;
+    color: #F7E7C9;
+}
+.s4{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.s5{
+    margin: 0 5px 0 0;
+    color: rgb(253, 51, 51);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin: 5px; 
+}
+.s6{
+     margin: 0 5px 0 0;
+     display: flex;
+    flex-direction: row;
+     justify-content: space-between; 
+    margin: 5px; 
+}
+.s{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
