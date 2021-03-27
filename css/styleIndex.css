@@ -52,6 +52,7 @@
     position: relative;
     height: 280px;
     width: 450px;
+    margin: 10px;
 }
 .front, .back {
     color: #F7E7C9;
