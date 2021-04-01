@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="css/styleIndex.css">
 </head>
 <body>
-    <div>
+    <div class="top">
+        <!-- <button id="popup">меню</button> -->
+        <div ><input class="popup" type="checkbox" id="key" checked="checked" name="theme" value="menu"></div>
+
+    </div>
+    <!-- <div> class="ss1"
         <div>
             <form id="taskFormFirst" action="#">
                 <input type="text" id="inputFirstFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
@@ -38,28 +43,49 @@
                 <button id="buttonFormFourth" form="taskFormFourth"  onclick="">2468</button>
             </form>
         </div>
-    </div>
+    </div> -->
     <div>
         <form id="servisForm" action="#">
+            Название
             <input type="text" id="inputFirstServisForm" form="servisForm">
+            Страна
             <input type="text" id="inputSecondServisForm" form="servisForm">
-            <button id="buttonServisForm" form="servisForm" onclick="window.location.href=window.location.href">save</button>
-            <!--full task
-                дописать inputЫ для отальных вводимых данных о фильме, для фотки нужно поле ввода ссылки 
-                добавить атрибуты ввода фильма
-                дописать ввод всех остальных элементов аналогично вводу country
-                продумать как добавлять картинку не в innerHTML а в свойство определенного стиля как его атрибут
-                
-            -->
+            Жанр
+            <input type="text" id="inputThirdServisForm" form="servisForm">
+            Режиссер
+            <input type="text" id="inputFourthServisForm" form="servisForm">
+            Сценарий
+            <input type="text" id="inputFifthServisForm" form="servisForm">
+            Продюсер
+            <input type="text" id="inputSixthServisForm" form="servisForm">
+            Оператор
+            <input type="text" id="inputSeventhServisForm" form="servisForm">
+            Композитор
+            <input type="text" id="inputEighthServisForm" form="servisForm">
+            Бюджет
+            <input type="text" id="inputNinthServisForm" form="servisForm">
+            Сборы
+            <input type="text" id="inputTenthServisForm" form="servisForm">
+            Рейтинг
+            <input type="text" id="inputEleventhServisForm" form="servisForm">
+            Длительность
+            <input type="text" id="inputTwelfthServisForm" form="servisForm">
+            Дата выхода
+            <input type="text" id="inputThirteenthServisForm" form="servisForm">
+            Постер(url ссылка)
+            <input type="text" id="inputFourteenthServisForm" form="servisForm">
+            <button id="buttonServisForm" form="servisForm" onclick="">save</button>
+            <!-- <input type="text" id="g">
+            <button id="filter"  onclick="window.location.href=window.location.href">Filter</button> -->
         </form>
     </div>
     <div id="vid" class="s1">
 
     </div>
 </body>
-<script src="js/taskFirst.js"></script> 
+<!-- <script src="js/taskFirst.js"></script> 
 <script src="js/taskSecond.js"></script> 
 <script src="js/taskThird.js"></script>
-<script src="js/taskFourth.js"></script>
+<script src="js/taskFourth.js"></script> -->
 <script src="js/taskFifth.js"></script>
 </html>
