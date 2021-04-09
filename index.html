@@ -4,88 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie sphere</title>
     <link rel="stylesheet" href="css/styleIndex.css">
 </head>
 <body>
-    <div class="top">
-        <!-- <button id="popup">меню</button> -->
-        <div ><input class="popup" type="checkbox" id="key" checked="checked" name="theme" value="menu"></div>
-
-    </div>
-    <!-- <div> class="ss1"
-        <div>
-            <form id="taskFormFirst" action="#">
-                <input type="text" id="inputFirstFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
-                <input type="text" id="inputSecondFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
-                <input type="text" id="inputThirdFormFirst" form="taskFormFirst"  pattern="\D{1,}" onblur="lineSpace()" required>
-                <input type="text" id="inputFourthFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
-                <input type="text" id="inputFifthFormFirst" form="taskFormFirst" pattern="\D{1,}" onblur="lineSpace()" required>
-                <button id="buttonFormFirst" form="taskFormFirst" onclick="">123</button>
-            </form>
+    <header  class="s123">
+        <div class="overlay">
+            <div class="top"> 
+                <div class="ms1">
+                    <div id="modal_11" class="overlay1" data-close="modal_11"></div>
+                    <div  class="si1" id="popup"  alt="" onclick="" data-modal="modal_11">
+                        MS
+                    </div>
+                </div>
+                <nav class="overlay2" data-close="modal_11">
+                    <div class="bif">
+                        <span id="dsf" class="small1" onclick="">Добавить</span>
+                        <span id="dsf1" class="small1" onclick="">Фильтр</span>
+                    </div>
+                    <form id="servisForm" action="#" class="qq12">
+                        <div class="q1">
+                            <div class="q5">Название</div>
+                            <div class="q6"><input type="text" id="inputFirstServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Страна</div>
+                            <div class="q6"><input type="text" id="inputSecondServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Жанр</div>
+                            <div class="q6">
+                                <input type="text" id="inputThirdServisForm" form="servisForm">
+                                <!-- <select name="" id="inputThirdServisForm" form="servisForm">
+                                    <option value=""></option>
+                                    <option value="Аниме">Аниме</option>
+                                    <option value="Биография">Биография</option>
+                                    <option value="Боевик">Боевик</option>
+                                    <option value="Ветерн">Ветерн</option>
+                                    <option value="Военный">Военный</option>
+                                    <option value="Детектив">Детектив</option>
+                                    <option value="Детский">Детский</option>
+                                    <option value="Для взрослых">Для взрослых</option>
+                                    <option value="Документальный">Документальный</option>
+                                    <option value="Драма">Драма</option>
+                                    <option value="Игра">Игра</option>
+                                    <option value="История">История</option>
+                                    <option value="Комедия">Комедия</option>
+                                    <option value="Сказка">Сказка</option>
+                                    <option value="Фантастика">Фантастика</option>
+                                    <option value="Ужасы">Ужасы</option>                                
+                                </select> -->
+                            </div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Режиссер</div>
+                            <div class="q6"><input type="text" id="inputFourthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Сценарий</div>
+                            <div class="q6"><input type="text" id="inputFifthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Продюсер</div>
+                            <div class="q6"><input type="text" id="inputSixthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Оператор</div>
+                            <div class="q6"><input type="text" id="inputSeventhServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Композитор</div>
+                            <div class="q6"><input type="text" id="inputEighthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Бюджет</div>
+                            <div class="q6"><input type="text" id="inputNinthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Сборы в мире</div>
+                            <div class="q6"><input type="text" id="inputTenthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Длительность</div>
+                            <div class="q6">
+                                <input type="time" id="inputTwelfthServisForm" form="servisForm">
+                            </div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Премьера в мире</div>
+                            <div class="q6"><input type="date" id="inputThirteenthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Рейтинг</div>
+                            <div class="q6"><input type="text" id="inputEleventhServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            <div class="q5">Постер(url ссылка)</div>
+                            <div class="q6"><input type="text" id="inputFourteenthServisForm" form="servisForm"></div>
+                        </div>
+                        <div class="q1">
+                            
+                        </div> 
+                        <span class="q4 small1" id="buttonServisForm" form="servisForm" onclick="">save</span>
+                    </form>
+                    <form id="servisForm1" action="#" class="qq">
+                        <div class="hr1">
+                            <div class="qqq123">
+                                <div class="q15q">Выберите страну</div>
+                                <div class="qqqs11"><input form="servisForm1" type="text" id="c"></div>
+                            </div>
+                            <div class="qqq123">
+                                <div class="q15q">Выберите жанр</div>
+                                <div class="qqq11">
+                                    <input form="servisForm1" type="text" id="g">
+                                    <!-- <select name="" id="g" form="servisForm1">
+                                        <option value=""></option>
+                                        <option value="Аниме">Аниме</option>
+                                        <option value="Биография">Биография</option>
+                                        <option value="Боевик">Боевик</option>
+                                        <option value="Ветерн">Ветерн</option>
+                                        <option value="Военный">Военный</option>
+                                        <option value="Детектив">Детектив</option>
+                                        <option value="Детский">Детский</option>
+                                        <option value="Для взрослых">Для взрослых</option>
+                                        <option value="Документальный">Документальный</option>
+                                        <option value="Драма">Драма</option>
+                                        <option value="Игра">Игра</option>
+                                        <option value="История">История</option>
+                                        <option value="Комедия">Комедия</option>
+                                        <option value="Сказка">Сказка</option>
+                                        <option value="Фантастика">Фантастика</option>
+                                        <option value="Ужасы">Ужасы</option>                                
+                                    </select> -->
+                                </div>
+                            </div>
+                            <div class="qqq123">
+                                <div class="q15q">Выберите год</div>
+                                <div class="qqq11"><input form="servisForm1" type="date" id="calendar"></div>
+                            </div>                           
+                        </div>
+                        <div class="hr2">
+                            <span id="filterDate" class="small1"  onclick="">Filter</span>
+                        </div>
+                    </form>
+                </nav>        
+            </div>
+            <div class="MSV1">MOVIE SPHERE</div>  
+            <div class="MSV2"> сфера твоих интересов</div>
+            <a href="#vid1" class="small">START</a>   
+            <!-- каждый сам решает чем ему заниматься, у каждого своя сфера интерсов,<br> MOVIE SPHERE - сфера твоих интересов-->
         </div>
-        <div>
-            <form id="taskFormSecond" action="#">
-                <input type="text" id="inputFirstFormSecond" class="inp" form="taskFormSecond" pattern="\D{1,}" required>
-                <button id="buttonFormSecond" form="taskFormSecond" onclick="">456</button>
-            </form>
-        </div>
-        <div>
-            <form id="taskFormThird" action="#">
-                <input type="text" id="inputFirstFormThird" class="inp" form="taskFormThird" pattern="\D{1,}" required>
-                <button id="buttonFormThird" form="taskFormThird" onclick="">789</button>
-            </form>
-        </div>
-        <div>
-            <form id="taskFormFourth" action="#">
-                <input type="text" id="inputFirstFormFourth" class="inp" form="taskFormFourth" pattern="\D{1,}" required >
-                <input type="text" id="inputSecondFormFourth" class="inp" form="taskFormFourth" pattern="\D{1,}" required >
-                <button id="buttonFormFourth" form="taskFormFourth"  onclick="">2468</button>
-            </form>
-        </div>
-    </div> -->
-    <div>
-        <form id="servisForm" action="#">
-            Название
-            <input type="text" id="inputFirstServisForm" form="servisForm">
-            Страна
-            <input type="text" id="inputSecondServisForm" form="servisForm">
-            Жанр
-            <input type="text" id="inputThirdServisForm" form="servisForm">
-            Режиссер
-            <input type="text" id="inputFourthServisForm" form="servisForm">
-            Сценарий
-            <input type="text" id="inputFifthServisForm" form="servisForm">
-            Продюсер
-            <input type="text" id="inputSixthServisForm" form="servisForm">
-            Оператор
-            <input type="text" id="inputSeventhServisForm" form="servisForm">
-            Композитор
-            <input type="text" id="inputEighthServisForm" form="servisForm">
-            Бюджет
-            <input type="text" id="inputNinthServisForm" form="servisForm">
-            Сборы
-            <input type="text" id="inputTenthServisForm" form="servisForm">
-            Рейтинг
-            <input type="text" id="inputEleventhServisForm" form="servisForm">
-            Длительность
-            <input type="text" id="inputTwelfthServisForm" form="servisForm">
-            Дата выхода
-            <input type="text" id="inputThirteenthServisForm" form="servisForm">
-            Постер(url ссылка)
-            <input type="text" id="inputFourteenthServisForm" form="servisForm">
-            <button id="buttonServisForm" form="servisForm" onclick="">save</button>
-            <!-- <input type="text" id="g">
-            <button id="filter"  onclick="window.location.href=window.location.href">Filter</button> -->
-        </form>
-    </div>
+    </header>
     <div id="vid" class="s1">
-
+        <div class="s321">
+            gbhdrns
+        </div>
+        <div id="vid1">
+            
+        </div>
     </div>
 </body>
-<!-- <script src="js/taskFirst.js"></script> 
-<script src="js/taskSecond.js"></script> 
-<script src="js/taskThird.js"></script>
-<script src="js/taskFourth.js"></script> -->
 <script src="js/taskFifth.js"></script>
+<script src="js/popupFunctionSplashScreen.js"></script>
 </html>

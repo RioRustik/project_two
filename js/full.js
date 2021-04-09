@@ -1,3 +1,159 @@
+
+            // if(c!=""&&g!=""&&cal!=""){
+            //     if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)&&(str1.indexOf(cal) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else if(c!=""&&g!=""){
+            //     if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else if(cal!=""&&g!=""){
+            //     if((str1.indexOf(cal) + 1)&&(string.indexOf(g) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else if(cal!=""&&c!=""){
+            //     if((str1.indexOf(cal) + 1)&&(string1.indexOf(c) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else if(cal!=""){
+            //     if((str1.indexOf(cal) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else if(g!=""){
+            //     if((string.indexOf(g) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else if(c!=""){
+            //     if((string1.indexOf(c) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }else{
+
+            // }
+
+
+            //-----
+//             if(cal==""&&g==""&&c==""){
+//             }
+//             else if(cal=""&&g==""){
+//                 if((string1.indexOf(c) + 1)){
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else if(cal==""&&c==""){
+//                 if((string.indexOf(g) + 1)){
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else if(g==""&&c==""){
+//                 if((str1.indexOf(cal) + 1)){
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else if(cal==""){
+//                 if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)) {
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else if(g==""){
+//                 if((str1.indexOf(cal) + 1)&&(string1.indexOf(c) + 1)) {
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else if(c==""){
+//                 if((str1.indexOf(cal) + 1)&&(string.indexOf(g) + 1)) {
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else{
+//                 if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)&&(str1.indexOf(cal) + 1)) {
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }
+            
+
+// document.getElementById('filterDate').onclick = function()
+// {
+//     if(document.getElementById('filterDate').onclick)
+//     { 
+//         films = JSON.parse(sessionStorage.getItem('str'));  
+//         for(let i=0;i<films.length;i++){  
+//             let elem =document.getElementsByClassName('picture')[i];
+//             let str1=films[i].date;
+//             let string=films[i].genre;
+//             let string1=films[i].country;
+//             let cal=document.getElementById('calendar').value;
+//             let g=document.getElementById('g').value;
+//             let c=document.getElementById('c').value;
+//             if(cal==""&&g==""){
+
+//             }else if(cal==""){
+//                 if((string.indexOf(g) + 1)||(string1.indexOf(g) + 1)) {
+//                     console.log(films[i]);
+//                 }
+//                 else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else if(g==""){
+//                 if((str1.indexOf(cal) + 1)) {
+//                     console.log(films[i]);
+//                     console.log(cal);
+                  
+//                 }
+//                 else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }else{
+//                 if((string.indexOf(g) + 1)||(string1.indexOf(g) + 1)&&(str1.indexOf(cal) + 1)) {
+//                     console.log(films[i]);
+//                 }else{
+//                     elem.classList.remove('picture');
+//                     elem.classList.add('none');
+//                 }
+//             }   
+            
+//          }
+//     }
+// }
+
 // tV- temporary variable
     // function f() {
     //     fd1.value = fd1.value.replace(/\s/g, '');
@@ -241,4 +397,44 @@
     // document.getElementsByClassName('s4')[i].append(c);
     // document.getElementsByClassName('s4')[i].appendChild(n);
 
+
+// function rew() {
+
+//     let overlay	= document.querySelector('.overlay1'),
+//         overlay1 = document.querySelector('.overlay2'),
+//         mClose	= document.querySelectorAll('[data-close]'),
+//         mStatus	= false;
+
+//     // for (let el of mClose) {
+//     //     el.addEventListener('click', modalClose);
+//     // }
+
+//     document.addEventListener('keydown', modalClose);
+
+//     overlay.classList.remove('fadeOut1');
+//     overlay.classList.add('fadeIn1');
+//     overlay1.classList.remove('fadeOut1');
+//     overlay1.classList.add('fadeIn1');
+//     mStatus = true;
+
+//     function modalClose(event) {
+//         if (mStatus) {
+//             overlay.classList.remove('fadeIn1');
+//             overlay.classList.add('fadeOut1');
+//             overlay1.classList.remove('fadeIn1');
+//             overlay1.classList.add('fadeOut1');
+//             mStatus = false;
+//         }
+//     }
+// }
+// function func1(){
+//     document.getElementsByClassName('ss1')[0].classList.add('ss2');
+// }
+// //     document.querySelector('.ss1').classList.add('ss2');
+// // }
+// function func2(){
+//     document.getElementsByClassName('ss2')[0].classList.add('ss1');
+
+//     // document.querySelector('ss2').classList.add('ss2');
+// }
 

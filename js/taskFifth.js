@@ -1,27 +1,38 @@
 let films = [];
 
-// document.getElementById('key').onclick = function()
-// {
-//     if(document.getElementById('key').checked){
-//         func2();
-//     }
-//     else
-//     {
-//         func1();
-//     }
-// }
-    
-// function func1(){
-//     document.getElementsByClassName('popup')[0].classList.add('ss2');
-// }
-// //     document.querySelector('.ss1').classList.add('ss2');
-// // }
-// function func2(){
-//     document.getElementsByClassName('popup')[0].classList.add('ss1');
+document.getElementById('popup').onclick = function()
+{
+    if(document.getElementById('popup').onclick)
+    {
+        rer();
+    }
+}
 
-//     // document.querySelector('ss2').classList.add('ss2');
-// }
 
+document.getElementById('dsf').onclick = function()
+{
+    if(document.getElementById('dsf').onclick)
+    {
+        document.getElementById('servisForm').classList.remove('qq');
+        document.getElementById('servisForm').classList.add('qq12');
+        document.getElementById('servisForm1').classList.remove('qq12');
+        document.getElementById('servisForm1').classList.remove('fq1');
+        document.getElementById('servisForm1').classList.add('qq');
+       
+    }
+}
+document.getElementById('dsf1').onclick = function()
+{
+    if(document.getElementById('dsf1').onclick)
+    {
+        document.getElementById('servisForm').classList.add('qq');
+        document.getElementById('servisForm').classList.remove('qq12');
+        document.getElementById('servisForm1').classList.add('qq12');
+        document.getElementById('servisForm1').classList.add('fq1');
+
+        document.getElementById('servisForm1').classList.remove('qq');
+    }
+}
 
 class Film
 {
@@ -43,7 +54,6 @@ class Film
         this.poster = poster;
     }
 }
-
 document.getElementById('buttonServisForm').onclick = function()
 {
     if(document.getElementById('buttonServisForm').onclick)
@@ -90,6 +100,8 @@ document.getElementById('buttonServisForm').onclick = function()
 
             ));
             sessionStorage.setItem('str', JSON.stringify(films)); 
+            i = films.length-1;
+            myfunc(i);
         }
         document.getElementById("inputFirstServisForm").value = "";
         document.getElementById("inputSecondServisForm").value = "";    
@@ -104,11 +116,11 @@ document.getElementById('buttonServisForm').onclick = function()
         document.getElementById('inputEleventhServisForm').value = "";
         document.getElementById('inputTwelfthServisForm').value = "";
         document.getElementById('inputThirteenthServisForm').value = "";
-        document.getElementById('inputFourteenthServisForm').value = "";    
+        document.getElementById('inputFourteenthServisForm').value = ""; 
+          
     }
 }
 test();
-
 function test()
 {
     if(sessionStorage.getItem('str'))
@@ -129,7 +141,7 @@ function myfunc(i)
         labelTitle.classList.add('front');
         labelTitle.classList.add('favorite-f');
         if(films[i].poster=="")
-            labelTitle.style.background = "linear-gradient( rgba(0, 0, 0, 0), rgba(128, 125, 125, 0.7) ), #232525";
+            labelTitle.style.background = "    background: linear-gradient( rgba(255, 18, 18, 0), rgb(252, 11, 11) )";
         else
             labelTitle.style.backgroundImage=`url(${films[i].poster})`;   
         let title1=document.createElement('h2');
@@ -141,6 +153,16 @@ function myfunc(i)
     mainBack.classList.add('favorite-f-back');
         let properties=document.createElement('div');
         properties.classList.add('s33');
+
+
+    let deletFilm=document.createElement('button');
+    deletFilm.classList.add('deletbuttun');
+    deletFilm.innerHTML = "del";
+    deletFilm.onclick = function () { 
+            labelTitle.parentNode.remove();
+            films.splice(i, 1);
+            sessionStorage.setItem('str', JSON.stringify(films)); 
+    };
 
     // блок страна
     let propCountry=document.createElement('div');
@@ -252,12 +274,13 @@ function myfunc(i)
         date1.innerHTML = films[i].date;
 
     // блок front
-    document.getElementById('vid').append(mainFront);
+    document.getElementById('vid1').append(mainFront);
     mainFront.append(labelTitle);
     labelTitle.append(title1);
     // блок back
     mainFront.append(mainBack);
     mainBack.append(properties);
+    mainBack.append(deletFilm);
     // блок страна
     properties.append(propCountry);
     propCountry.append(labelCountry);
@@ -307,5 +330,187 @@ function myfunc(i)
     propDate.append(labelDate);
     propDate.append(date1);       
 }
+document.getElementById('filterDate').onclick = function()
+{
+    if(document.getElementById('filterDate').onclick)
+    { 
+        films = JSON.parse(sessionStorage.getItem('str'));  
+        let cal=document.getElementById('calendar').value;//поле календарь
+        let g=document.getElementById('g').value;//;поле genre
+        let c=document.getElementById('c').value;//поле country
+        for(let i=0;i<films.length;i++)
+        {  
+           
+            let str1=films[i].date;
+            let string=films[i].genre;
+            let string1=films[i].country;
+            let elem =document.getElementsByClassName('picture')[i];
 
+            // if(c!=""&&g!=""&&cal!="")
+            // {
+            //     if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)&&(str1.indexOf(cal) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }
+            // if(c!=""&&g!=""&&cal=="")
+            // {
+            //     if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }
+            // if(cal!=""&&g!=""&&c==""){
+            //     if((str1.indexOf(cal) + 1)&&(string.indexOf(g) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }
+            // if(cal!=""&&c!=""&&g==""){
+            //     if((str1.indexOf(cal) + 1)&&(string1.indexOf(c) + 1)) {
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }
+            // if(cal!=""&&c==""&&g==""){
+            //     if((str1.indexOf(cal) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }
+            // if(g!=""&&cal==""&&c==""){
+            //     if((string.indexOf(g) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }
+            // if(c!=""&&cal==""&&g==""){
+            //     if((string1.indexOf(c) + 1)){
+            //         console.log(films[i]);
+            //     }else{
+            //         elem.classList.remove('picture');
+            //         elem.classList.add('none');
+            //     }
+            // }         
+            if((cal=="")&&(g=="")&&(c=="")){
 
+            }
+           else if((cal="")&&(g=="")&&(c!="")){
+                                if((string1.indexOf(c) + 1)){
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+            }
+           else  if((cal=="")&&(c=="")&&(g!="")){
+                                if((string.indexOf(g) + 1)){
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+            } 
+           else if((g=="")&&(c=="")&&(cal!="")){
+                                if((str1.indexOf(cal) + 1)){
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+            }
+            else if((cal=="")&&(c!="")&&(g!="")){
+                                if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)) {
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+            }
+           else if((g=="")&&(c!="")&&(cal!="")){
+                                if((str1.indexOf(cal) + 1)&&(string1.indexOf(c) + 1)) {
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+            }
+          else  if((c=="")&&(cal!="")&&(g!="")){
+                                if((str1.indexOf(cal) + 1)&&(string.indexOf(g) + 1)) {
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+            }
+            else{
+                                if((string.indexOf(g) + 1)&&(string1.indexOf(c) + 1)&&(str1.indexOf(cal) + 1)) {
+                                    console.log(films[i]);
+                                }else{
+                                    elem.classList.remove('picture');
+                                    elem.classList.add('none');
+                                }
+         }
+                            
+                
+                // document.getElementById('filterDate').onclick = function()
+                // {
+                //     if(document.getElementById('filterDate').onclick)
+                //     { 
+                //         films = JSON.parse(sessionStorage.getItem('str'));  
+                //         for(let i=0;i<films.length;i++){  
+                //             let elem =document.getElementsByClassName('picture')[i];
+                //             let str1=films[i].date;
+                //             let string=films[i].genre;
+                //             let string1=films[i].country;
+                //             let cal=document.getElementById('calendar').value;
+                //             let g=document.getElementById('g').value;
+                //             let c=document.getElementById('c').value;
+                //             if(cal==""&&g==""){
+                
+                //             }else if(cal==""){
+                //                 if((string.indexOf(g) + 1)||(string1.indexOf(g) + 1)) {
+                //                     console.log(films[i]);
+                //                 }
+                //                 else{
+                //                     elem.classList.remove('picture');
+                //                     elem.classList.add('none');
+                //                 }
+                //             }else if(g==""){
+                //                 if((str1.indexOf(cal) + 1)) {
+                //                     console.log(films[i]);
+                //                     console.log(cal);
+                                  
+                //                 }
+                //                 else{
+                //                     elem.classList.remove('picture');
+                //                     elem.classList.add('none');
+                //                 }
+                //             }else{
+                //                 if((string.indexOf(g) + 1)||(string1.indexOf(g) + 1)&&(str1.indexOf(cal) + 1)) {
+                //                     console.log(films[i]);
+                //                 }else{
+                //                     elem.classList.remove('picture');
+                //                     elem.classList.add('none');
+                //                 }
+                //             }   
+                            
+                //          }
+                //     }
+                // }
+                
+        }
+     }
+}
